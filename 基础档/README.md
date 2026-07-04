@@ -22,6 +22,7 @@
 | `CP2082_Daily_Optimized_v3_20entry_worldinfo.json` | 全局世界书，夜之城静态设定（19 条） | 世界书 |
 | `模型预设_Claude.json` / `模型预设_Gemini.json` | 采样参数 + 提示词，**按后端二选一** | 预设 |
 | `滚动总结提示词.md` | ST 自带「总结」的配置 | 见文件内步骤 |
+| `regex-tts标签.json` | 出站剥离 TTS 标签，**仅用 TTS 时需要** | Regex（可选） |
 
 ---
 
