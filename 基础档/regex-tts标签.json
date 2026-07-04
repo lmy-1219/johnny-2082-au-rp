@@ -1,0 +1,17 @@
+{
+    "id": "155e4f16-1d7c-40a1-8d9e-a4cf6a26e015",
+    "scriptName": "TTS标签-仅出站剥离",
+    "findRegex": "/\\((?:laughs|chuckle|coughs|clear-throat|groans|breath|pant|inhale|exhale|gasps|sniffs|snorts|lip-smacking|humming|emm)\\)|<#0\\.[2-9]#>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

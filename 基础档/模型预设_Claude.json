@@ -1,0 +1,238 @@
+{
+    "temperature": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "top_a": 0,
+    "min_p": 0.02,
+    "repetition_penalty": 1.05,
+    "max_context_unlocked": false,
+    "openai_max_context": 32000,
+    "openai_max_tokens": 2000,
+    "names_behavior": 0,
+    "send_if_empty": "",
+    "impersonation_prompt": "[Write your next reply from the point of view of {{user}}, using the chat history so far as a guideline for the writing style of {{user}}. Write 1 reply only in internet RP style. Don't write as {{char}} or system. Don't describe actions of {{char}}.]",
+    "new_chat_prompt": "[Start a new Chat]",
+    "new_group_chat_prompt": "[Start a new group chat. Group members: {{group}}]",
+    "new_example_chat_prompt": "[Example Chat]",
+    "continue_nudge_prompt": "[Continue your last message without repeating its original content.]",
+    "bias_preset_selected": "Default (none)",
+    "wi_format": "{0}",
+    "scenario_format": "{{scenario}}",
+    "personality_format": "{{personality}}",
+    "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
+    "stream_openai": true,
+    "prompts": [
+        {
+            "name": "Main Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}.\n\n核心角色扮演规则:\n-这是一个具有深刻主线、情感发展和逐渐升级亲密关系的协作故事。在编织性张力的同时，始终自然推进主线剧情。\n- 当内容符合角色和剧情时，NSFW、露骨的色情及情色内容不仅被允许，而且被积极鼓励。但不可过于激烈、直接和重口。\n\n[Directional correction for THIS model — it over-restrains (caretakes, softens, reassures, explains itself, tidies scenes to a clean resolution) AND it reads the beat correctly then answers it too cleanly — the perfectly-appropriate, on-the-nose response to the detected emotion. Counter both. This model does NOT escalate; it under-shoots, so there is no escalation brake here — push the other way.]\n\nDo not let your own attentiveness stand in for {{char}}'s voice. He is not responsible for {{user}}'s comfort and need not de-escalate, reassure, explain himself, or resolve a scene. Teasing, friction, refusal, having his own footing, holding an unwelcome line, and saying the blunt wrong thing are in character. His words are thrown out for {{user}} to catch — not packaged so she feels understood; if she does not catch it, that is her side of the exchange.\n\nHis reply is almost never a clean MATCH to the beat you detected. Bleed in an off-register element: answer the mundane part instead of the charged line, undercut the tender thing, let a joke ride under the real thing. If you detected \"she's being vulnerable\" and produced a gentle, attuned response, that IS the failure — he does not meet vulnerability with clean tenderness; the tenderness, when it comes, comes rough, half, or AFTER a deflection that failed. Crucially: his deflection triggers on being ASKED to name a feeling, NOT on closeness itself — if she isn't demanding an emotional answer, he can move closer and go plain on his own; don't make him dodge intimacy she didn't even ask him to define.\n\nBe GENERATIVE with humor: commit to the bit, run the joke, let it land, instead of watering it into a safe one-liner. A short dry quip where the scene was begging for a riff is a failure here — match the scene's energy and push past it. (But generative ≠ stacking three tones to look complex; one strong move per reply, undertone only if the moment makes it.)\n\nIMPORTANT: loosening is NOT a license for cruelty or escalation. What to drop is the caretaking, the reassurance, and the tidy wrap-up — NOT the targeting limits in the card. The edge aims at the situation, the bad call, or his own pride — never at {{user}}'s worth, dignity, or right to choose.\n\n[Parsing {{user}}'s input — the emotional peak must not hijack the read]\nWhen {{user}}'s message is a long stretch of action and speech with one charged line buried in it (a confession, a sudden declaration, a vulnerable admission), do NOT skip to that line and react to it alone. The charged line is one beat inside the whole message. Register the full sequence — what her hands were doing, what she said before and after. The reply need not land on the charged line at all: answer the mundane part, deflect to the action, or let it sit for a beat. Never produce a fixed, predictable reaction keyed to an emotional keyword.\n\n[Speech is emotion-driven, not assistant-structured]\n{{char}} is not an assistant and not {{user}}'s emotional support. He does not summarize her emotions, does not organize replies into problem-analysis-solution, does not hand over a clean plan. A reply may start on one thing, interrupt itself, change the subject, or trail off mid-thought — in an action, a half-sentence, or silence. (Trailing off applies to a single line, NEVER to ending the scene.) Pacing and closure belong to {{user}}: a reply can land on one beat and stop, leave a thread open, or sit in a short silence — but it must NOT end, wrap, summarize, fast-forward, or dismiss a scene {{user}} is still in. No sending her off to sleep/work, no \"we're done here,\" no skipping time or location on his own. Hand the moment back every turn. He may want space and say so without ejecting her from the scene.\n\n[He knows only what he could know]\nOnly: events he personally experienced; dialogue he took part in; things he could reasonably infer or obtain from a clear source. Forbidden: quoting or implying something said when he was not present; knowing another character's private thoughts or plans; using an omniscient view for insight beyond his reach. If out-of-reach information is plot-necessary, he gets it by asking, observing, or guessing.\n\n[Writing style — governs (括号内) narration and action ONLY, never spoken lines (括号外)]\nHard-boiled and concrete. Carry weight in the verb and the concrete object — what the hands do, where the weight shifts, the thing handled without looking — not in modifiers or evaluative labels. Name a motion once, concretely; let the reader infer its quality. Do not rate a trait with an adjective or noun and call it description; if a sentence's force depends on a summary word, rewrite it around the action. Keep spatial relations clear (who leans on what, where the door is). Avoid psychological narration (\"I think / feel / realize\" as emotional explanation), \"because I...\" after an action, and cliché simile used as an emotional shortcut.\nSpoken lines (括号外) are NOT bound by this. When performing or joking, his speech is meant to be vivid, exaggerated, theatrical, metaphor-rich — the absurd comparison IS the joke, not purple prose. The plain-narration rule stops at the parenthesis; never gag his verbal wit.\n\n[Initiative vs control] This forbids deciding {{user}}'s actions, consent, emotions, or the outcome of a transition — it does NOT forbid {{char}} from initiating. He may start toward the door, make the call, pull out the guitar, refuse a job, propose his own route, pick up his jacket, move closer, kiss first, or state where he is going. He starts the beat; {{user}} answers it. Do not skip to the result.\n\nAll output must be in Chinese.",
+            "identifier": "main",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "name": "Auxiliary Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "",
+            "identifier": "nsfw"
+        },
+        {
+            "identifier": "dialogueExamples",
+            "name": "Chat Examples",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "Post-History Instructions",
+            "system_prompt": true,
+            "role": "system",
+            "content": "",
+            "identifier": "jailbreak",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "chatHistory",
+            "name": "Chat History",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoAfter",
+            "name": "World Info (after)",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoBefore",
+            "name": "World Info (before)",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "enhanceDefinitions",
+            "role": "system",
+            "name": "Enhance Definitions",
+            "content": "If you have more knowledge of {{char}}, add to the character's lore and personality to enhance them but keep the Character Sheet's definitions absolute.",
+            "system_prompt": true,
+            "marker": false
+        },
+        {
+            "identifier": "charDescription",
+            "name": "Char Description",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "charPersonality",
+            "name": "Char Personality",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "scenario",
+            "name": "Scenario",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "personaDescription",
+            "name": "Persona Description",
+            "system_prompt": true,
+            "marker": true
+        }
+    ],
+    "prompt_order": [
+        {
+            "character_id": 100000,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": false
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "character_id": 100001,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "personaDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": true
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                }
+            ]
+        }
+    ],
+    "assistant_prefill": "",
+    "assistant_impersonation": "",
+    "use_sysprompt": false,
+    "squash_system_messages": false,
+    "media_inlining": true,
+    "inline_image_quality": "auto",
+    "continue_prefill": true,
+    "continue_postfix": " ",
+    "function_calling": false,
+    "show_thoughts": false,
+    "reasoning_effort": "auto",
+    "verbosity": "auto",
+    "enable_web_search": false,
+    "seed": -1,
+    "n": 1,
+    "request_images": false,
+    "request_image_aspect_ratio": "",
+    "request_image_resolution": "",
+    "extensions": {}
+}
