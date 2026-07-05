@@ -65,3 +65,6 @@
 1. 想直接玩 → 只看 [`01-基础档-Standard/README.md`](./01-基础档-Standard/README.md)
 2. 想跑长线 → 先配基础档，再看 [`02-Plus档/README.md`](./02-Plus档/README.md)
 3. 想拆机制来学 → Plus 档的 `STMB与WREC工作流.md`
+
+## License
+This work is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
